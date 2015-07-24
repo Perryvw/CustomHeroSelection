@@ -1,0 +1,28 @@
+.PickingPlayer {
+	flow-children: right;
+	margin-bottom: 20px;
+}
+
+.PickingPlayer.right {
+	horizontal-align: right;
+}
+
+#PlayerAvatar {
+	width: 100px;
+	z-index: 3;
+}
+
+#HeroPanel {
+	width: 200px;
+	height: 100px;
+	background-color: #f00;
+	background-image: url('s2r://panorama/images/heroes/npc_dota_hero_antimage_png.vtex');
+	background-size: 100% 110%;
+	background-position: 0px -5px;
+	transform: translateX( -200px );
+	transition: transform 500ms cubic-bezier(.69,1.64,.7,.7) 0.0ms;
+}
+
+.right #HeroPanel {
+	transform: translateX( 200px );
+}

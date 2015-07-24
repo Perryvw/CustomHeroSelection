@@ -1,0 +1,141 @@
+/* General layout
+=================================================================*/
+#LeftPlayers {
+	padding-top: 50px;
+	width: 500px;
+	height: 100%;
+	background-color: gradient( linear, -300% 100%, 100% 100%, from( #003300 ), to( #000000 ) );
+	flow-children: down;
+}
+
+#RightPlayers {
+	padding-top: 50px;
+	width: 500px;
+	height: 100%;
+	background-color: gradient( linear, 300% 100%, 0% 100%, from( #330000 ), to( #000000 ) );
+	horizontal-align: right;
+	flow-children: down;
+}
+
+#PickingScreen {
+	width: 100%;
+	height: 1036px;
+	margin-top: 44px;
+	background-color: #000000;
+}
+
+#PickList {
+	width: 100%;
+	height: 100%;
+	flow-children: down;
+	visibility: visible;
+}
+
+#PostPickScreen {
+	width: 100%;
+	height: 100%;
+	visibility: collapse;
+	flow-children: down;
+}
+
+.ClassContainer{
+	width: 800px;
+	height: 100%;
+	position: 550px 0 0;
+	background-color: #151515;
+	flow-children: down;
+	color: #ffffff;
+	padding: 2% 0 5% 0;
+}
+
+#HeroPreview {
+	width:600px;
+	horizontal-align: center;
+	height:600px;
+}
+
+/* 'Enter game' button
+=================================================================*/
+#EnterGameBtn {
+	horizontal-align: center;
+	margin-top: 20px;
+
+	box-shadow: fill #00000066 -4px -4px 8px 8px;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #5AA15E ), to( #87d69533 ) );
+	background-image: url("s2r://panorama/images/backgrounds/background_play_button_large_2x_png.vtex");
+	background-size: 320px 120px;
+	height: 55px;
+	width: 420px;
+	padding-top: 6px;
+}
+
+#EnterGameBtn.disabled, #EnterGameBtn.disabled:Hover {
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #9C9C9C ), to( #D1D1D133 ) );
+}
+
+#EnterGameBtn:Hover {
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #6FDE75 ), to( #87d69533 ) );
+}
+
+#EnterGameBtn Label {
+	horizontal-align: center;
+	color: #fff;
+	font-size: 36px;
+}
+
+/* Hero options
+=================================================================*/
+.ClassOption {
+	width: 500px;
+	height: 100px;
+	horizontal-align: center;
+	margin-bottom: 20px;
+	background-color: #fff;
+	background-size: 100% 300%;
+	background-position: 0px -60px;
+	saturation: 0.3;
+	transition: desaturation 250ms ease 0.0ms, transform 250ms ease 0.0ms;
+	opacity-mask: url("file://{images}/custom_game/skew_mask.tga");
+}
+
+.ClassOption:hover {
+	saturation: 1;
+	transform: translateX( 20px );
+}
+
+.ClassOption.taken {
+	saturation: 0.0;
+	transform: none;
+	opacity: 0.2;
+}
+
+
+/* Text elements and timer
+=================================================================*/
+#HeroSelectText {
+	horizontal-align: center;
+	margin-top: 5px;
+	font-size: 48px;
+	color: #fff;
+}
+
+#PickTextPanel {
+	horizontal-align: center;
+	flow-children: right;
+}
+
+#PickTimer {
+	width: 70px;
+	height: 70px;
+	border: 3px solid #fff;
+	border-radius: 35px;
+	margin: 0px 20px 20px 0px;
+}
+
+#TimerTxt {
+	width: 60px;
+	text-align:center;
+	font-size: 44px;
+	color:#fff;
+	margin: 8px 0px 0px 2px;
+}

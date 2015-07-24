@@ -1,0 +1,66 @@
+<root>
+	<!-- Include stylesheets -->
+	<styles>
+		<include src="file://{resources}/styles/custom_game/picking_screen.css" />
+	</styles>
+
+	<!-- Include script files -->
+	<scripts>
+		<!-- Libraries -->
+		<include src="file://{resources}/scripts/custom_game/Modular.js" />
+
+		<!-- Panel script -->
+		<include src="file://{resources}/scripts/custom_game/hero_selection.js" />
+	</scripts>
+
+	<Panel hittest="false" style="width: 100%; height: 100%;">
+		<Panel hittest="true" id="PickingScreen">
+
+			<!--Left-hand player section 
+			==================================================================-->
+			<Panel id="LeftPlayers">
+				<!-- JS Inserts player elements here -->
+			</Panel>
+
+			<!-- Middle section 
+			==================================================================-->
+			<Panel class="ClassContainer" >
+				<Panel id="PickTextPanel">
+					<Panel id='PickTimer'>
+						<Label id='TimerTxt' text="" />
+					</Panel>
+					<Label id="HeroSelectText" text="Select a hero" />
+				</Panel>
+
+				<!-- Pick list (showing options) -->
+				<Panel id="PickList">
+					<Panel id="npc_dota_hero_antimage" class="ClassOption" 
+						onactivate="SelectHero('npc_dota_hero_antimage')" 
+						style="background-image: url('file://{images}/loadingscreens/witch_hunter_loading_screen/loadingscreen.tga');" />
+					<Panel id="npc_dota_hero_legion_commander" class="ClassOption"
+						onactivate="SelectHero('npc_dota_hero_legion_commander')" 
+						style="background-image: url('file://{images}/loadingscreens/valkyrie_loadingscreen/loadingscreen.tga');" />
+					<Panel id="npc_dota_hero_drow_ranger" class="ClassOption"
+						onactivate="SelectHero('npc_dota_hero_drow_ranger')" 
+						style="background-image: url('file://{images}/loadingscreens/traxex_loadingscreen/loadingscreen.tga');" />
+					<Panel id="npc_dota_hero_rubick" class="ClassOption"
+						onactivate="SelectHero('npc_dota_hero_rubick')" 
+						style="background-image: url('file://{images}/loadingscreens/harlequin_loading_screen/loadingscreen.tga');" />
+				</Panel>
+
+				<!-- Post-pick screen (hero view) -->
+				<Panel id="PostPickScreen">
+					<Button id="EnterGameBtn" class="disabled" onactivate="EnterGame()" >
+						<Label id="EnterGameBtnTxt" text="Waiting for other players..." />
+					</Button>
+				</Panel>
+			</Panel>
+
+			<!-- Right-hand player section 
+			==================================================================-->
+			<Panel id="RightPlayers">
+				<!-- JS Inserts player elements here -->
+			</Panel>
+		</Panel>
+	</Panel>
+</root>
