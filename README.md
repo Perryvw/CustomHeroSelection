@@ -1,6 +1,8 @@
 # CustomHeroSelection
 Custom hero selection in Panorama/Lua for Dota 2 custom games
 
+Gif video of the result: http://gfycat.com/SelfishGrippingIlladopsis
+
 The screen is visible by default as soon as the player gets ingame. To use this successfully use this first force a default hero: 
 
 ```lua
